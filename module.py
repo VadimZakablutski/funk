@@ -45,10 +45,8 @@ def season(kuu:int):
     :param int kuu: esimene arv
     :rtype str
     """
-    if kuu==12:
-        print("Зима")
-    elif 0<kuu<3:
-        print("Зима")
+    if kuu==12 or 1<=kuu<=2:
+       print("Зима")
     elif 2<kuu<6:
         print("Весна")
     elif 5<kuu<9:
