@@ -24,15 +24,21 @@ def arithmetic(a: float,b:float,c=str):
         print("Viga!")
     return("")
 def is_year_leap(year:int):
+    """Kirjutame suvalise aasta ja programm määrab ära, kas viisaaasta või mitte, kas True või False.
+    """
     if year%4==0:
         print("True")
     else:
         print("False")
     return("")
 def square(kv:float):
+    """Kirjutame ruudu külje ja programm annab meile ruudu pindala, perimeetri ja diagonaali
+    """
     return(4*kv, kv**2, (2*kv**2)**.5)
     return("")
 def season(kuu:int):
+    """Kirjutame 1-12 kuust ja programm määrab aastaaja kuu kaupa
+    """
     if kuu==12:
         print("Зима")
     elif 0<kuu<3:
@@ -47,35 +53,39 @@ def season(kuu:int):
         print("Viga!")
     return
 def bank(a:float,years:int):
+    """Paneme raha saldole ja ootame n arv aastaid
+    """
     for _ in range(years):
         a=((1.1*1/100)*a)*100
     print("Ваш баланс:",a)
     return("")
 def is_prime(a:int):
+    """Kirjutame arvu vahemikus 0 kuni 1000 ja tagastame tõene, kui see on lihtne, ja Väär muul juhul.
+    """
     b=2
     while a%b!=0:
         b+=1
     return b==a
 def xor_cipher(string:str, key:str)->str:
-    """ Tavaline sõna kodeeritakse
+    """Tavaline sõna kodeeristakse
     """
     result=""
     temp=int()
     for i in range(len(string)):
-        temp=ord(string[i]) #näitab sümnoli kood
+        temp=ord(string[i])
         for j in range(len(key)):
-            temp ^= ord(key[j])
-        result += chr(temp)
-    return result 
-def xor_uncipher(string:str, key:str)->str:
-    """ Kodeeritud text dekodeeritakse
+            temp^=ord(key[j])
+        result+=chr(temp)
+    return result
+def xor_uncipher(string:str, key: str)->str:
+    """koderiumine text dekodeeritakse
     """
-    result=""
-    temp=[]
+    result = ""
+    temp = []
     for i in range(len(string)):
-        temp .append(string[i])
+        temp.append(string[i])
         for j in reversed(range(len(key))):
-            temp[i]=chr(ord(key[j])) ^ ord(temp[i])
+            temp[i] = chr(ord(key[j]) ^ ord(temp[i]))
         result += temp[i]
     return result
 def date(day:int, month:int, year:int):

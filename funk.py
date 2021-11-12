@@ -31,11 +31,11 @@ while True:
         print(result)
     elif v.upper()=="K":
         print("Kodeerimine".center(60,"*"))
-        result=xor_cipher(input("Sisesta text"), input("Sisesta võti: "))
+        result=xor_cipher(input("Sisesta text"), input("Sisesta võti :"))
         print(result)
-        print("Dekodeerimine".center(60,"*"))
-        de_result=xor_uncipher(result, input("Sisesta võti:"))
-        print(de_result)
+        print("Dekodeerimine". center(60,"*"))
+        de_rezult=xor_uncipher(result, input("Sisesta võti:"))
+        print(de_rezult)
     elif v.upper()=="G":
         day=int(input("Sisestage päev: "))
         month=int(input("Sisestage kuu: "))
